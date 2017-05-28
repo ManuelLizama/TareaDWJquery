@@ -79,6 +79,21 @@
     	$(document).ready(function(){
     		//texto al cual se le modificaran atributos
     		var texto = $('div.container').children('p');
+    		//funcion del boton "+"
+    		$("#font_size_more").click(function(){
+    			var tam_actual = texto.css('font-size');
+    			var num_actual = parseFloat(tam_actual);
+    			var tam_nuevo = num_actual + 1;
+    			texto.css('font-size', tam_nuevo);
+    		});
+    		//funcion del boton "-"
+    		$("#font_size_less").click(function(){
+    			var tam_actual = texto.css('font-size');
+    			var num_actual = parseFloat(tam_actual);
+    			var tam_nuevo = num_actual - 1;
+    			texto.css('font-size', tam_nuevo);
+    		});
+    		
     	});
     </script>
 
