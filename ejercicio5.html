@@ -100,6 +100,11 @@
 				var fuente = $('#font_family')["0"].value;
        	  		$('div.container').children().css('font-family',fuente)
 			});
+			//Funcion para el input color, para el cambio de color de fondo
+			$('#bgcolor').change(function(){
+				var color = $('#bgcolor')["0"].value;
+       			$('body').css('background',color)
+			});
 
     	});
     </script>
