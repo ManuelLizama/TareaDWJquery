@@ -77,23 +77,28 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script>
     	$(document).ready(function(){
-    		//texto al cual se le modificaran atributos
+    		//Texto al cual se le modificaran atributos
     		var texto = $('div.container').children('p');
-    		//funcion del boton "+"
+    		//Funcion del boton "+"
     		$("#font_size_more").click(function(){
     			var tam_actual = texto.css('font-size');
     			var num_actual = parseFloat(tam_actual);
     			var tam_nuevo = num_actual + 1;
     			texto.css('font-size', tam_nuevo);
     		});
-    		//funcion del boton "-"
+    		//Funcion del boton "-"
     		$("#font_size_less").click(function(){
     			var tam_actual = texto.css('font-size');
     			var num_actual = parseFloat(tam_actual);
     			var tam_nuevo = num_actual - 1;
     			texto.css('font-size', tam_nuevo);
     		});
-    		
+    		//Funcion del combobox para cambio de tipografia
+    		$('#font_family').change(function(){
+				var fuente = $('#font_family')["0"].value;
+       	  		$('div.container').children().css('font-family',fuente)
+			});
+			
     	});
     </script>
 
